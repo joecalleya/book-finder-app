@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'book-finder-app';
+
+
+handleSearch(item: string) {
+  // What should we do here when we need to handle the search
+  
+  console.log("Search")
+
+}
 }

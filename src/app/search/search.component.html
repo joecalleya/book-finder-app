@@ -1,0 +1,5 @@
+<section>
+    <input [(ngModel)]="searchText" class="searchbox__input" type="text" placeholder="search">
+    <button class="btn-search" (click)="handleSearch()">Search</button>
+    <app-booklist [searchResult]="searchResult"></app-booklist>
+</section>
