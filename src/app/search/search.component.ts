@@ -33,12 +33,10 @@ export class SearchComponent implements OnInit {
     // const searchResult = [];
 
     const searchFor = this.searchText;
-    console.log(searchFor)
     this.onItemSearch.emit(searchFor);
 
     this.http.get(`https://www.googleapis.com/books/v1/volumes?q=inauthor=${searchFor}`).toPromise().then((response: GoogleBooksResponse) => {
       this.searchResult = response.items;
-      console.log(this.searchResult)
     });
   }
 
