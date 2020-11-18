@@ -1,6 +1,5 @@
 import { Component, Output , OnInit, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { AngularFirestore } from '@angular/fire/firestore';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 interface GoogleBooksResponse {
@@ -18,22 +17,16 @@ export class SearchComponent implements OnInit {
 
   searchText: string;
   searchResult: any[];
-  isSaved: boolean;
-  savedBooks:  any[];
+
   // create an event for when you add the search .
   @Output() onItemSearch = new EventEmitter<string>();
 
 
   constructor(private http: HttpClient,
-              private firestore:AngularFirestore
               ) {}
 
   ngOnInit(): void {
 
-    this.firestore.collection('savedBooks').get().toPromise().then(response=>{
-      this.savedBooks = response.docs.map(d => d.data())
-
-    })
   }
   
   handleSearch() {
