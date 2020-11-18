@@ -1,6 +1,6 @@
 .search {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -9,14 +9,11 @@
 .btn-search {
     background: navy;
     color: white;
-    padding: 5px 10px;
     border-radius: 5px;
     width: 200px;
 }
 
 .search__input {
-    padding: 5px;
     border: 1px solid gray;
-    padding: 5px;
     width: 200px;
 }
