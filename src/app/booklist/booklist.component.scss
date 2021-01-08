@@ -1,18 +1,22 @@
 
+// Item 2 . Set the Max width to 800 px and display the objects in two columns rather than five on booklistcomponent.scss
+
+
 .bookGrid {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 5%;
-    width: 100%;
-    height: 200%;
-
+    grid-template-columns: 400px 400px;
+    margin: 5px;
+    max-width: 800px;
+    height: 100%;
+    border: 5px solid black;
 
     //Item 1 -added Margin and Padding
 
     .bookRender{
+        margin: 5px;
+        padding: 5px;
         display: flex;
         flex-direction: row;
         width: 100px;
@@ -22,7 +26,7 @@
 
         a {
             z-index: -1;
-            width: 30%;
+            width: 100%;
         }
 
         img{
