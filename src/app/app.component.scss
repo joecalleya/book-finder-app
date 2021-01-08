@@ -1,3 +1,5 @@
+// Item 3 . Change book image to title like ‘Book Search’ -->
+
 
 .HomePage {
     display: flex;
@@ -6,8 +8,9 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    img {
+    h1 {
         width: 30%;
+        text-align: center;
     }
 }
 
