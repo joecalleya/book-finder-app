@@ -22,7 +22,6 @@ export class BooklistComponent implements OnInit {
   getSaved () {
     this.firestore.collection('savedBooks').get().toPromise().then(response=>{
     this.savedBooks = response.docs.map(d => d.data())})
-    console.log("Saved", this.savedBooks)
 }
   ngOnInit(): void {
     this.getSaved()

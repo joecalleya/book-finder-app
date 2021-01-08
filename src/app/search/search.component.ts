@@ -37,6 +37,9 @@ export class SearchComponent implements OnInit {
 
     this.http.get(`https://www.googleapis.com/books/v1/volumes?q=inauthor=${searchFor}`).toPromise().then((response: GoogleBooksResponse) => {
       this.searchResult = response.items;
+      
+      console.log("returned", this.searchResult)
+
     });
   }
 
