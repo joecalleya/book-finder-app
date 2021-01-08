@@ -1,51 +1,49 @@
-
 // Item 2 . Set the Max width to 800 px and display the objects in two columns rather than five on booklistcomponent.scss
 
 
 .bookGrid {
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    grid-template-columns: 400px 400px;
-    margin: 5px;
-    max-width: 800px;
-    height: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  max-width: 800px;
+  height: 100%;
+
+  //Item 1 -added Margin and Padding
+
+  .bookRender {
+    margin: 25px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height: 300px;
     border: 5px solid black;
+    //item 7 - buylink styling
 
-    //Item 1 -added Margin and Padding
+    // a {
+    //   z-index: -1;
+    //   width: 150px;
+    //   height: 200px;
+    // }
 
-    .bookRender{
-        margin: 5px;
-        padding: 5px;
-        display: flex;
-        flex-direction: row;
-        width: 100px;
-        height: 100px;
+    img {
+      z-index: 1;
+      width: 150px;
+      height: 200px;
+      margin: 5px;
+      padding: 2px;
 
-        //item 7 - buylink styling
-
-        a {
-            z-index: -1;
-            width: 100%;
-        }
-
-        img{
-            z-index: 1;
-            width: 50px;
-            margin: 10px;
-            border: 5px solid black;
-
-        } 
-    
-        fa-icon {
-            font-size: 90%;
-        }
-    
-        p {
-    
-            font-size: 20%;   
-            width: 20%;
-    
-        }
     }
+
+    fa-icon {
+      font-size: 90%;
+    }
+
+    p {
+
+      font-size: 90%;
+
+    }
+  }
 }
