@@ -5,48 +5,31 @@
     align-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 5px;
- 
-    
-
+    margin: 5%;
     width: 100%;
     height: 200%;
 
+}
 
-    //Item 1 -added Margin and Padding
 
-    .bookRender{
-        margin: 5px;
-        padding: 5px;
-        display: flex;
-        flex-direction: row;
-        width: 100px;
-        height: 100px;
+.bookRender{
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    height: 20%;
 
-        //item 7 - buylink styling
+    img{
+        width: 30%;
+    } 
 
-        a {
-            z-index: -1;
-            width: 30%;
-        }
+    fa-icon {
+        font-size: 150%;
+    }
 
-        img{
-            z-index: 1;
-            width: 50px;
-            margin: 10px;
-            border: 5px solid black;
+    p {
 
-        } 
-    
-        fa-icon {
-            font-size: 90%;
-        }
-    
-        p {
-    
-            font-size: 20%;   
-            width: 20%;
-    
-        }
+        font-size: 100%;   
+        width: 20%;
+
     }
 }
