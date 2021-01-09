@@ -2,6 +2,20 @@ import { Input, Component, OnInit } from '@angular/core';
 import { faBook } from '@fortawesome/free-solid-svg-icons';
 import { AngularFirestore } from '@angular/fire/firestore';
 
+ 
+//item 8. Create an interface for the response - Strongly type the response -On this issue ,can you make the items property typed instead of any[] and set said type in the booklist component which currently doesn’t know the structure of the searchResult input other than object[].
+
+interface searchResult {
+
+  accessInfo: object;
+  etag: string;
+  id: string;
+  kind: string;
+  saleInfo: object;
+  searchInfo: object;
+  selfLink: string;
+  volumeInfo: string;
+}
 
 @Component({
   selector: 'app-booklist',
@@ -11,7 +25,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class BooklistComponent implements OnInit {
 
-  @Input() searchResult: object[];
+  @Input() searchResult: searchResult;
 
   faBook = faBook;
   isSaved: boolean;

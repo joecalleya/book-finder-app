@@ -6,12 +6,13 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
+// 8. Create an interface for the response - Strongly type the response, changed to object instead of any
 
 interface GoogleBooksResponse {
-  items: any[];
-  kind: string;
-  totalItems: number;
+
+  items: object[];
 }
+
 
 @Component({
   selector: 'app-search',
@@ -21,7 +22,7 @@ interface GoogleBooksResponse {
 export class SearchComponent implements OnInit {
 
   searchText: string;
-  searchResult: any[];
+  searchResult: object[];
   faSearch = faSearch;
 
   // create an event for when you add the search .
@@ -43,7 +44,7 @@ export class SearchComponent implements OnInit {
     this.http.get(`https://www.googleapis.com/books/v1/volumes?q=inauthor=${searchFor}`).toPromise().then((response: GoogleBooksResponse) => {
       this.searchResult = response.items;
       
-      console.log("returned", this.searchResult)
+      console.log("returned", (this.searchResult))
 
     });
   }
