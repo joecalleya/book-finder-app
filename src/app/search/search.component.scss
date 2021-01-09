@@ -1,19 +1,64 @@
+//item 4. Make the search to look more like googles style
+$grey-colour1: rgb(113, 114, 136);
+$white-colour1: rgb(248, 249, 250);
+$blue-colour1: rgb(66,133,244);
+
+
 .search {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 
-.btn-search {
-    background: navy;
-    color: white;
-    border-radius: 5px;
-    width: 200px;
-}
+  //item 4. Make the search to look more like googles style
 
-.search__input {
-    border: 1px solid gray;
-    width: 200px;
+  .SearchbarContainer {
+    border: 1px $grey-colour1 solid;
+    border-radius: 20px;
+    padding: 4px;
+    &:hover {
+      box-shadow: -1px 1px 4px $grey-colour1;
+    }
+
+    fa-icon {
+      font-size: 80%;
+      padding: 3px;
+      margin: 3px;
+      color: $grey-colour1;
+      opacity: 0.6;
+    }
+
+    .searchBoxInput {
+
+      border: none;
+      width: 600px;
+      padding: 7px;
+      height: 10px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .btnSearch {
+    background: $white-colour1;
+    color: $grey-colour1;
+    border-radius: 3px;
+    width: 150px;
+    height: 25px;
+    font-size: 10px;
+    margin: 30px;
+    border: none;
+    &:hover {
+      border: 1px $grey-colour1 solid;
+    }
+    &:focus {
+      outline: none;
+      border: 1px $blue-colour1 solid;
+    }
+
+
+  }
 }

@@ -2,6 +2,11 @@ import { Component, Output , OnInit, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
+// item 4. Make the search to look more like googles style
+
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+
+
 interface GoogleBooksResponse {
   items: any[];
   kind: string;
@@ -17,6 +22,7 @@ export class SearchComponent implements OnInit {
 
   searchText: string;
   searchResult: any[];
+  faSearch = faSearch;
 
   // create an event for when you add the search .
   @Output() onItemSearch = new EventEmitter<string>();

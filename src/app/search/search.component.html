@@ -1,5 +1,10 @@
+<!-- Item 4. Make the search to look more like googles style -->
+
 <section class="search">
-    <input [(ngModel)]="searchText" class="searchbox__input" type="text" placeholder="search">
-    <button class="btn-search" (click)="handleSearch()">Search For Book</button>
+    <div class="SearchbarContainer">
+        <fa-icon [icon]="faSearch"></fa-icon>
+        <input [(ngModel)]="searchText" class="searchBoxInput" type="text">
+    </div>
+    <button class="btnSearch" (click)="handleSearch()">Search For Book</button>
     <app-booklist [searchResult]="searchResult"></app-booklist>
 </section>
