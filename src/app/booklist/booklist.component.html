@@ -1,6 +1,9 @@
 <section class="bookGrid">
     <div class="bookRender" *ngFor="let item of searchResult">
-        <fa-icon (click)="handleSave(item)" [icon]="faSave"></fa-icon>
+
+        <!-- item 5 . Change fa-save icon to fa-book -  -->
+
+        <fa-icon (click)="handleSave(item)" [icon]="faBook"></fa-icon>
         <!-- <a ng-href="www.google.com">    </a> -->
 
         <img src={{item.volumeInfo.imageLinks.smallThumbnail}} alt="book thumb">

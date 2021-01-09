@@ -1,5 +1,5 @@
 import { Input, Component, OnInit } from '@angular/core';
-import { faSave } from '@fortawesome/free-solid-svg-icons';
+import { faBook } from '@fortawesome/free-solid-svg-icons';
 import { AngularFirestore } from '@angular/fire/firestore';
 
 
@@ -13,7 +13,7 @@ export class BooklistComponent implements OnInit {
 
   @Input() searchResult: object[];
 
-  faSave = faSave;
+  faBook = faBook;
   isSaved: boolean;
   savedBooks: any[];
 
