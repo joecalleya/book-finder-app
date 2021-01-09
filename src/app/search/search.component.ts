@@ -36,7 +36,6 @@ export class SearchComponent implements OnInit {
   }
   
   handleSearch() {
-    // const searchResult = [];
 
     const searchFor = this.searchText;
     this.onItemSearch.emit(searchFor);

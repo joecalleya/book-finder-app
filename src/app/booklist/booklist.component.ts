@@ -31,6 +31,4 @@ export class BooklistComponent implements OnInit {
 
     this.firestore.collection('savedBooks').add(item)
 }
-
-
 }
