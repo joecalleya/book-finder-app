@@ -1,6 +1,5 @@
 <section class="bookGrid">
     <div class="bookRender" *ngFor="let item of searchResult">
-
         <!-- item 5 . Change fa-save icon to fa-book -  -->
         <fa-icon (click)="handleSave(item)" [icon]="faBook"></fa-icon>
         <!-- <a ng-href="www.google.com">    </a> -->
@@ -10,6 +9,5 @@
             <!-- item 6. Add the price from the sale info object - in  -->
             <p>{{item.saleInfo.listPrice.amount}}</p>
         </div>
-
     </div>
 </section>
