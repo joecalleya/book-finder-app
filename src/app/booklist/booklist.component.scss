@@ -1,5 +1,8 @@
-// Item 2 . Set the Max width to 800 px and display the objects in two columns rather than five on booklistcomponent.scss
 
+@import '../../sass/variables';
+
+
+// Item 2 . Set the Max width to 800 px and display the objects in two columns rather than five on booklistcomponent.scss
 
 .bookGrid {
   display: grid;
@@ -19,21 +22,13 @@
     width: 300px;
     height: 300px;
 
-    //item 7 - buylink styling
-
-    // a {
-    //   z-index: -1;
-    //   width: 150px;
-    //   height: 200px;
-    // }
-
     img {
       z-index: 1;
       width: 150px;
       height: 200px;
       margin: 5px;
       padding: 2px;
-
+      background-color: $grey-colour1;
     }
 
     fa-icon {
