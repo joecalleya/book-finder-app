@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "book-finder-app"
+    }
+  },
+  "defaultProject": "book-finder-app",
+  "cli": {
+    "analytics": "e23af449-d620-48a9-b1aa-f9bfed580f81"
+  }
 }

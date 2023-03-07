@@ -1,0 +1,19 @@
+.search {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-search {
+  background: navy;
+  color: white;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.searchbox__input {
+  border: none;
+  margin: 5px;
+}

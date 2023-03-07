@@ -1,12 +1,8 @@
 import { Component, Output , OnInit, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
-
-interface GoogleBooksResponse {
-  items: any[];
-  kind: string;
-  totalItems: number;
-}
+import { DataFetchService } from '../data-fetch.service';
+import { CONTENT_ATTR } from '@angular/compiler';
 
 @Component({
   selector: 'app-search',
@@ -23,25 +19,23 @@ export class SearchComponent implements OnInit {
 
 
   constructor(private http: HttpClient,
+              private dataFetchService: DataFetchService
               ) {}
 
   ngOnInit(): void {
 
   }
-  
-  handleSearch() {
-    // const searchResult = [];
+  DataFetchService: DataFetchService[] = [];
 
+  handleSearch(){
     const searchFor = this.searchText;
     this.onItemSearch.emit(searchFor);
-
-    this.http.get(`https://www.googleapis.com/books/v1/volumes?q=inauthor=${searchFor}`).toPromise().then((response: GoogleBooksResponse) => {
-      this.searchResult = response.items;
-      
-      console.log("returned", this.searchResult)
-
-    });
+    this.dataFetchService.handleAPISearch(searchFor)
+    .subscribe(data => {
+     this.searchResult = data.items
+     console.log("returned", this.searchResult)
+     return this.searchResult
+     });
+    return this.searchResult
   }
-
-  }
-
+} 

@@ -7,21 +7,26 @@
     flex-wrap: wrap;
     margin: 5%;
     width: 100%;
-    height: 200%;
 
 }
-
 
 .bookRender{
     display: flex;
     flex-direction: row;
-    width: 20%;
-    height: 20%;
+    flex-wrap: wrap;
+    width: 150px;
+    height: 250px;
 
     img{
-        width: 30%;
-    } 
+        position: absolute;
+        width: 150px;
+        opacity: 0.1;
+        height: 250px;
 
+        &:hover{
+            opacity: 1;
+        }
+    } 
     fa-icon {
         font-size: 150%;
     }

@@ -1,9 +1,10 @@
 .HomePage {
   display: flex;
-  justify-content: center;
-  align-content: center;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
 }
 
 img {
-  width: 250px;
+  width: 30%;
 }
